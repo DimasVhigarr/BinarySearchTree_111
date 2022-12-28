@@ -101,6 +101,21 @@ namespace BinarySearchTree_111
                 preorder(ptr.rightchild);
             }
         }
+        
+        public void postorder(Node ptr)/* performs the postorder traversal of the three*/
+        {
+            if (ROOT == null)
+            {
+                Console.WriteLine("Tree is Empty");
+                return;
+            }
+            if (ptr != null)
+            {
+                postorder(ptr.leftchild);
+                postorder(ptr.rightchild);
+                Console.WriteLine(ptr.info + "");
+            }
+        }
         static void Main(string[] args)
         {
         }
